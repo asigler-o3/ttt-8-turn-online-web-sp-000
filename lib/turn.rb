@@ -35,14 +35,10 @@ def turn(board)
   user_input = gets.strip
    index = input_to_index(user_input)
    user_input.to_i-1
- if index.between?(0,8)
-   valid_move?(board, 0)
-    true
-  else
-    gets(user_input)
-    position_taken?(board, index)
-  if true
-    display_board(board)
+   if valid_move?(board, index)
+      player_move(board, index, current_player(board))
+      display_board(board)
+    else
+      turn(board)
+    end
   end
- end
-end
