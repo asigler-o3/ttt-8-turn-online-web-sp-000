@@ -14,12 +14,20 @@ def move(board, user_input, character = "X")
    board[user_input] = character
 end
 
-def valid_move?(board,index)
-  board[index].to_i.between?(0,8)
+def valid_move?(board, index)
+  if !position_taken?(board, index) && (index).between?(0,8)
+    return true
+  else 
+    return false
+  end
 end
 
-def position_taken?(board,index)
-  board[index] == "X" || board[index] == "O"
+def position_taken? (board, index)
+  if board[index] == "" || board[index] == " " || board[index] == nil
+    return false
+  else
+    return true
+  end
 end
 
 def turn(board)
