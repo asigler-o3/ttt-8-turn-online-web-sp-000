@@ -36,7 +36,6 @@ def turn(board)
    index = input_to_index(user_input)
    user_input.to_i-1
    if valid_move?(board, index)
-      player_move(board, index, current_player(board))
       display_board(board)
     else
       turn(board)
