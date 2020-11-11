@@ -16,6 +16,7 @@ end
 
 def valid_move?(board,index)
   board[index].to_i.between?(0,8)
+  return board
 end
 
 def position_taken?(board,index)
