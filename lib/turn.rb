@@ -19,8 +19,7 @@ def valid_move?(board,index)
 end
 
 def position_taken?(board,index)
-  return false if [" ", "", nil].include?(board[index])
-  return true if ["X", "O"].include?(board[index])
+  board[index] == "X" || board[position] == "O"
 end
 
 def turn(board)
