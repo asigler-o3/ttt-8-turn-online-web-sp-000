@@ -39,6 +39,6 @@ def turn(board)
      move(board, user_input, character = "X")
      display_board(board)
     else
-      turn(board)
+     turn(board)
   end
 end
