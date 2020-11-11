@@ -24,6 +24,7 @@ def position_taken?(board,index)
   return false if [" ", "", nil].include?(board[index])
   return true if ["X", "O"].include?(board[index])
 end
+end
 
 def turn(board)
   puts "Please enter 1-9:"
