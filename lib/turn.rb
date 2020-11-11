@@ -15,7 +15,7 @@ def move(board, user_input, character = "X")
 end
 
 def valid_move?(board,index)
-  board[index].to_i.between?(1,9)
+  board[index].to_i.between?(,9)
   valid_move?(board,index)
 end
 end
