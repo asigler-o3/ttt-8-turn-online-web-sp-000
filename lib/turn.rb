@@ -15,7 +15,7 @@ def move(board, user_input, character = "X")
 end
 
 def valid_move?(board,index)
-  board[index].to_i.between?(,9)
+  board[index].to_i.between?(0,8)
   valid_move?(board,index)
 end
 end
@@ -23,8 +23,6 @@ end
 def position_taken?(board,index)
   return false if [" ", "", nil].include?(board[index])
   return true if ["X", "O"].include?(board[index])
-  end
-  end
 end
 
 def turn(board)
